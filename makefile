@@ -1,2 +1,2 @@
-get_dataset: src/data/get_raw_dataset.js
-	node src/data/get_raw_dataset.js
+get_dataset: src/data/get_raw_data.py
+	python src/data/get_raw_data.py
