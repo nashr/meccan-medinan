@@ -7,8 +7,7 @@ df_raw = pd.read_csv("data/processed/suras.csv")
 df = pd.DataFrame()
 
 print("Extracting feature: is_prefix_al...")
-al = chr(1575) + chr(1604)
-df["is_prefix_al"] = df_raw.name.str.startswith(al)
+df["is_prefix_al"] = df_raw.name.str.startswith("ال")
 
 print("Extracting feature: is_moon...")
 suns = [
