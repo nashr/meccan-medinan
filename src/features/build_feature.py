@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 print("Loading required data...")
-df_raw = pd.read_csv("data/processed/suras.csv")
+df_raw = pd.read_csv("data/raw/suras.csv")
 
 df = pd.DataFrame()
 

@@ -7,7 +7,7 @@ tnames = []
 types = []
 
 print("Loading required data...")
-dom = parse("data/raw/quran-data_2019-06-15.xml")
+dom = parse("data/external/quran-data_2019-06-15.xml")
 suras = dom.getElementsByTagName("sura")
 for sura in suras:
     names.append(sura.attributes["name"].value)
@@ -20,4 +20,4 @@ df = pd.DataFrame({
     "tname": tnames,
     "type": types,
 })
-df.to_csv("data/processed/suras.csv", index=False)
+df.to_csv("data/raw/suras.csv", index=False)
