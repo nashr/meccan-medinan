@@ -36,6 +36,12 @@ df.is_moon = np.where(
     )
 )
 
+print("Extracting feature: harf_length...")
+df["harf_length"] = df_raw.name.str.replace(r" ", "").str.len()
+
+print("Extracting feature: is_odd...")
+df["is_odd"] = (df.harf_length % 2 == 1)
+
 print("Encoding target: type -> is_meccan...")
 df["is_meccan"] = (df_raw.type == "Meccan")
 
